@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    //打包后的代码版本  默认：ES3
+    "target": "esnext",
+    //指定生成js文件使用的模块化规范
+    "module": "CommonJS",
+    "strict": true,
+    "jsx": "preserve",
+    // 设置为真时，就会检查是否是空值，提示和报错 a?.b?.c
+    "strictNullChecks":true,
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    // 设置为真，就可避免隐式any，因为会提示和报错
+    "noImplicitAny":true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    // 编译后的js文件存放所在的目录
+    "outDir": "./dist",
+    "types": [
+      "node"
+    ],
+    "declaration": true,// 是否生成声明文件
+    "declarationDir": "dist/type",// 声明文件打包的位置
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ], // 如果要使用index.tsx的，需要配置这个
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+  ]
+}
+
