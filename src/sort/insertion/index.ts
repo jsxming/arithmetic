@@ -19,4 +19,26 @@ function insertion(arr:number[]){
   console.log(arr)
 }
 
-insertion([28,8,64,51,32,21])
+/**
+ * 希尔排序 增量序列D
+ * 
+ * @param arr 
+ */
+function hill(arr:number[]){
+  const len = arr.length
+  // 类似插入排序的优化，代码跟插入排序长得也差不多。把1换成D，外面加一层D
+  for(let D=Math.floor(len/2); D>0; D=Math.floor(D/2)){    
+    
+    for(let p=D; p<len; p++){
+      const temp = arr[p]
+      for(let i=p; i>0 && arr[i-D] >temp;i-=D){
+          arr[i] = arr[i-D] 
+          arr[i-D]  =temp
+      }
+    }
+
+  }
+  console.log(arr)
+}
+
+hill([28,8,64,51,32,21])
