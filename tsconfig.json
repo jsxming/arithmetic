@@ -19,8 +19,14 @@
     "baseUrl": ".",
     // 编译后的js文件存放所在的目录
     "outDir": "./dist",
-    "types": [
-      "node"
+    // 指定了types，只有被列出来的包才会被包含进来
+    // "types": [
+    //   "node"
+    // ],
+    // 指定了typeRoots，只有typeRoots下面的包才会被包含进来
+    "typeRoots": [
+      "node_modules/@types",
+      "./src/typings"
     ],
     "declaration": true,// 是否生成声明文件
     "declarationDir": "dist/type",// 声明文件打包的位置
