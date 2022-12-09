@@ -42,3 +42,5 @@ function hill(arr:number[]){
 }
 
 hill([28,8,64,51,32,21])
+
+insertion([102,100,99,97,103,98,104,101])
