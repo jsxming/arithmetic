@@ -22,11 +22,15 @@ var rotateRight = function (head, k) {
     temp = temp.next
     len++
   }
-  temp.next = head
   let num = k
   if (len < k) {
     num = k % len
   }
+  if (num === 0) {
+    return head
+  }
+  temp.next = head
+
   let start = null;
   let idx = 0;
 
